@@ -1,5 +1,9 @@
 ---
-  - name: i want to create a file
-    file:
-      path: /home/ubuntu/mytestfile
-      state: touch
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks: 
+  - name: i want to install apache2
+    apt:
+      name: apache2
+      state: present
