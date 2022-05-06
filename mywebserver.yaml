@@ -11,7 +11,7 @@
    - name: install tree
      apt:
        name: tree
-       state: present
+       state: absent
      when: ansible_os_family =="Debian"
    - name: install redhat
      yum:
