@@ -3,9 +3,9 @@
   become: yes
   gather_facts: yes
   tasks:
-   - name: install webserver
+   - name: install git
      apt:
-       name: apache2
+       name: git
        state: present
      when: ansible_os_family =="Debian"
    
