@@ -1,11 +1,8 @@
 ---
-- hosts: 172.31.6.109
+- hosts: all
   become: yes
   tasks:
-  - name: install git
-    apt: 
-      name: git
-      state: present
+  
 
   - name: install tree
     apt:
@@ -13,7 +10,4 @@
       statee: present
     ignore_errors: yes
 
-  - name: install wget
-    apt:
-      name: wget
-      state: present
+  
