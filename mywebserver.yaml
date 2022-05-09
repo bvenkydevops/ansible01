@@ -4,9 +4,9 @@
   gather_facts: yes
   tasks:
    
-   - name: install tree
+   - name: install webserver
      apt:
-       name: tree
-       state: absent
+       name: apache2
+       state: present
      when: ansible_os_family =="Debian"
    
